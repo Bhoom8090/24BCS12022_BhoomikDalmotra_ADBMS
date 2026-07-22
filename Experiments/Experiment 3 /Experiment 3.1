@@ -1,0 +1,14 @@
+Task
+Write a query to count the number of students across departments who has scored more than 80 marks.
+Alias the count column as 'Dept_HighScore_Count' Your table 'student' has the following columns:
+
+St_id
+St_name
+Marks
+Department
+
+Solution:-
+
+select department,count(CASE WHEN marks > 80 THEN 1 ELSE NULL END) as Dept_HighScore_Count from student 
+group by 
+department
